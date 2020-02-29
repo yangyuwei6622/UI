@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .div2{
+            /*display: none;*/
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        .div3{
+            /*height: 200px;*/
+            /*width: 200px;*/
+            background-color: green;
+        }
+    </style>
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+//            增加和删除样式
+//            $(".div1").addClass("div2") //样式名字没有.
+//            $('.div3').removeClass('div3')//如果没有参数,就是删除所有样式
+
+//            切换样式,注意相同的属性有继承的样子...
+//            $('#btn').click(function () {
+//
+//                $('.div3').toggleClass('div2');
+//            })
+            
+//            判断有没有样式
+            $('#btn2').click(function () {
+               var hasCss = $('.div3').hasClass('div2');
+               if (hasCss){
+                   $('.div3').removeClass()
+               }else {
+                   $('.div3').removeClass()
+                   $('div').eq(1).addClass('div2')
+               }
+            })
+
+        })
+
+
+
+    </script>
+</head>
+<body>
+<button id="btn">切换</button>
+<input type="button" value="判断有没有样式" id="btn2">
+
+<div class="div1">
+111
+</div>
+<div class="div3">
+    222
+</div>
+
+
+</body>
+</html>

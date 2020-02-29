@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div{
+            display: none;
+            height: 100px ;
+            width:  100px;
+            background-color:red;
+        }
+    </style>
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('button').eq(0).click(function () {
+//                数字以毫秒为单位
+//                $('div').show(1000);
+                $('div').show(function () {
+                    alert("nihao")
+                })
+            })
+            $('button').eq(1).click(function () {
+                $('div').hide();
+            })
+
+        })
+
+
+    </script>
+</head>
+<body>
+<button>显示</button>
+<button>隐藏</button>
+<div>
+
+</div>
+</body>
+</html>

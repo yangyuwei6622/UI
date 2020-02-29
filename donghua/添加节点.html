@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $('input').eq(0).click(function () {
+                var text = $('input').eq(0).val();
+                $('input').eq(1).val(text);
+            })
+            //设置html
+            $('.htmlBtn').click(function () {
+                $('#div1').html("<p>nihao</p>")
+            })
+
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="设置值">
+<input type="button" value="更换html" class="htmlBtn">
+<input type="text">
+<div id="div1">cshi</div>
+</body>
+</html>
